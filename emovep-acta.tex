@@ -1,0 +1,123 @@
+% Plantilla LaTeX para "Acta Técnica de Respuestas y Aclaraciones"
+% Compilar con XeLaTeX o LuaLaTeX en LyX
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{xcolor}
+\definecolor{law}{HTML}{CB9760}           % Color para artículos de ley
+\usepackage{fontspec}
+\setmainfont{Calibri}                      % Fuente principal: Calibri
+\usepackage[hidelinks]{hyperref}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textbf{Código:} R-CP-ARA-10}
+\rhead{\textbf{Versión:} 2}
+\cfoot{\thepage}
+
+% Comando para resaltar artículos de ley: \articulo{Texto}
+\newcommand{\articulo}[1]{\textcolor{law}{#1}}
+
+\begin{document}
+
+% Título y metadatos
+\begin{center}
+  {\LARGE\bfseries ACTA DE RESPUESTAS Y ACLARACIONES}\\[1ex]
+  {\large \textbf{PROCESO:} SIE-EMOVEP-2025-002}\\[1ex]
+\end{center}
+
+% Sección de información general
+\section*{Inicio de la sesión e Información del proceso}
+\begin{tabular}{p{4cm}p{10cm}}
+  \textbf{Objeto:}            & Adquisición y puesta en marcha de equipos de comunicación de acceso y datacenter \\
+  \textbf{NUT:}               & EMOV EP-2025-3403 \\
+  \textbf{Código o Número:}   & SIE-EMOVEP-2025-002 \\
+  \textbf{Monto Referencial:}  & USD 60,773.00 \\
+  \textbf{Tipo de Proceso:}    & Subasta inversa electrónica \\
+  \textbf{CPC:}                & 452900028 \\
+  \textbf{Link Quipux:}       & \url{enlace} \\
+\end{tabular}
+
+% Sección de preguntas y aclaraciones
+\section*{Análisis de las preguntas, respuestas y aclaraciones}
+
+\subsection*{Pregunta 1}
+\textbf{Pregunta / Aclaración:}
+En el ítem 2, switch de acceso (agregación) de Data Center, se solicita que el switch incluya al menos 24 puertos 10/100/1000Base-T PoE/PoE+, sin embargo no se especifica un soporte mínimo de potencia ni estándares obligatorios. Además, se indica que será para puertos de gestión que no requieren PoE, por lo que pedimos considerar PoE/PoE+ opcional.
+
+\textbf{Respuesta / Aclaración:}
+Se informa que, aunque se mencionan puertos PoE/PoE+, no se establecen parámetros mínimos de watts ni estándares (IEEE 802.3af/at). Dado que estos switches estarán destinados a gestión del centro de datos, donde no se requiere PoE, se acepta que la funcionalidad PoE/PoE+ sea opcional.
+
+\textbf{Fecha Pregunta:} 2025-04-03 12:46:01
+
+\subsection*{Pregunta 2}
+\textbf{Pregunta / Aclaración:}
+En "Otros parámetros resueltos por la entidad" se menciona carta compromiso y plan de capacitación, pero no se solicitan condiciones mínimas en los Términos de Referencia, por lo que asumimos que no es obligatorio presentar dicha carta.
+
+\textbf{Respuesta / Aclaración:}
+El numeral 6 de dicha sección exige presentación de carta compromiso que incluya:
+\begin{itemize}
+  \item Entrega de manuales técnicos.  
+  \item Comprobación de instalación y funcionamiento.  
+  \item Garantía técnica.  
+  \item Plan de capacitación (mínimo 4 horas presenciales para 4 funcionarios de EMOV EP).  
+\end{itemize}
+Por tanto, es obligatorio presentar la carta compromiso con estos elementos.
+
+\textbf{Fecha Pregunta:} 2025-04-03 12:52:53
+
+\subsection*{Pregunta 3}
+\textbf{Pregunta / Aclaración:}
+Se solicita que las fichas técnicas estén en español; solicitamos aceptar documentación en inglés, dado que proviene de fabricantes internacionales.
+
+\textbf{Respuesta / Aclaración:}
+Se acepta documentación en inglés siempre que:
+\begin{enumerate}
+  \item Corresponda inequívocamente con el bien ofertado.  
+  \item Contenga información completa para verificar especificaciones.  
+  \item Sea accesible (sin formatos restringidos).  
+\end{enumerate}
+La entidad podrá solicitar traducción simple de partes esenciales.
+
+\textbf{Fecha Pregunta:} 2025-04-03 13:03:19
+
+\subsection*{Pregunta 4}
+\textbf{Pregunta / Aclaración:}
+El requerimiento L2 de mínimo 212\,000 direcciones MAC parece direccionar a Cisco Catalyst. Se sugiere reducir a 100\,000 direcciones.
+
+\textbf{Respuesta / Aclaración:}
+La capacidad de 212\,000 entradas se establece para entornos de alta densidad (32 puertos 10/25GE, 4 puertos 40/100GE, virtualización) y no busca favorecer marca; se mantiene obligatorio dicho mínimo.
+
+\textbf{Fecha Pregunta:} 2025-04-03 15:50:06
+
+\subsection*{Pregunta 5}
+\textbf{Pregunta / Aclaración:}
+El QoS con Strict Priority SP y DWRR favorece a Cisco; proponemos solo WWR.
+
+\textbf{Respuesta / Aclaración:}
+Se mantiene la solicitud de SP y DWRR, ya que garantiza priorización de tráfico crítico y está soportado por varias marcas.
+
+\textbf{Fecha Pregunta:} 2025-04-03 15:53:18
+
+\subsection*{Pregunta 6}
+\textbf{Pregunta / Aclaración:}
+Se exige TPM para arranque seguro en switches; TPM es restrictivo en conmutadores y se sugiere otras soluciones como firma digital de firmware.
+
+\textbf{Respuesta / Aclaración:}
+TPM es un estándar soportado por múltiples marcas y asegura la integridad de hardware y software en el arranque; se mantiene obligatorio.
+
+\textbf{Fecha Pregunta:} 2025-04-03 15:59:31
+
+% Clausura
+\section*{Disposiciones finales y Clausura de la Sesión}
+Para constancia de lo actuado, el suscrito ratifica el contenido de esta acta. Se da por terminada la sesión.
+
+\vspace{2cm}
+\begin{flushright}
+Firmas de Responsabilidad de los Miembros de la Comisión Técnica:\[1ex]
+Sr. Carlos Sigua\\
+Analista de Infraestructura y Telecomunicaciones\\
+Número de Certificación SERCOP: qoU2Mk1fhk
+\end{flushright}
+
+\end{document}
